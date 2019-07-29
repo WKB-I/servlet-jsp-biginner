@@ -72,6 +72,9 @@ public class Main extends HttpServlet {
 
 			//RegistTweetlistForApplicationscope
 			application.setAttribute("mutterList", mutterList);
+		}else {
+			//RegistErrormsgForRequestscope
+			request.setAttribute("errorMsg", "つぶやきが入力されていません");
 		}
 		//forwordMainScreen
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/jsp/main.jsp");
